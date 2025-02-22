@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Watches</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+IE+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sixtyfour&display=swap"
+    rel="stylesheet"> -->
+   
     <style>
-        .container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .card{
-           flex: 1 1 calc(33.33% - 30px); 
-            margin: 10px;
-            box-sizing: border-box; 
-            
-        }
-         .heading{
+      .heading{
             font-size: 32px;
             font-weight: bold;
             margin-bottom: 10px;
@@ -31,237 +25,317 @@
          /* margin-bottom: 10px; */ 
 
         }
-        .container1{
-            text-align: center;
-        }
+      
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.logo{
+  margin-left:-1px;
+  margin-top: -4px;
+}
+.logo {
+    margin-bottom: 9px;
+}
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+.navbar {
+  position: sticky;
+  top: 0px;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+body{
+  background-color: rgba(109, 91, 91, 0.355); 
+
+  
+}
+
+.btn {
+  color: black;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  position: relative;
+  left: 85px;
+}
+.btn.card_btn{
+  background-color: #b78b5e;
+
+  color: white;
+}
+.subscribe{
+  position: relative;
+top: 60px;
+/* color: #000; */
+}
+.btn{
+   color: #d3c7c7; 
+}
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* height: 500px; */
+  border-radius: 10px;
+
+}
+.cards {
+    position: relative;
+    left: 30px;
+}
+.card_content {
+  padding: 1rem;
+  background: #ecf9ff;
+}
+
+.card_title {
+  color: #050404;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  font-size: 18px;
+   line-height: 1.5; 
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.card_image {
+    height: 350px;
+}
+
     </style>
 </head>
-
 <body>
-    <nav>
-        <div class="nav__header">
-          <div class="nav__logo">
-            <a href="#">
-              <img
-                src="images/logo-dark.png"
-                alt="logo-dark"
-                class="logo-dark"
-              />
-              <img
-                src="images/logo-white.png"
-                alt="logo-white"
-                class="logo-white"
-              />
-            </a>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
-        </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#product">Product</a></li>
-         
-          <li><a href="#Contact Us">Contact Us</a></li>
-          <li class="dropdown">  
-          <a href="#">Categories <i class="ri-arrow-down-s-line"></i></a> 
-             <ul class="dropdown-content">  
-            <li><a href="sports-watches.html">SPORT WATCHES</a></li>
-            <li><a href="Smart Watches.html">Smart Watches</a></li>
+   
+  <nav class="navbar" >
+    <div class="logo">
+    <img src="images/logo-white.png" alt="">
+    </div>
+    <ul class="nav-links" style="margin-top: -1px;">
+    <li><a href="navbar.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Categories <i class="ri-arrow-down-s-line"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="Sport Watches.html">Sport Watches</a></li>
+            <li><a href="smart-watches.html">Smart Watches</a></li>
             <li><a href="luxury watches.html">Luxury Watches</a></li>
-            <li><a href="#">Category 4</a></li>
-            </ul>
-    </li>
+            <li><a href="couplewatches.html">Couple Watches</a></li>
+          </ul>
+        </li>
+  
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+        <!-- <li><a href="#Support">Support</a></li> -->
+  
+      </ul>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+<br><br>
+<h1 style="font-size: 50px;"><center><b>Luxury Watches</b></center></h1>
+  <!-- <span style="font-size: 29px;"><center><b>6 products</b></center></span> -->
+      <div class="main">
     
-</ul>
-</nav>
-
-        </ul>
-      </nav>
-
-    <main>
-        <section class="container watches-section">
-            <div class="container1">
-          <br><br>
-          <h1 class="heading"><center>Smart Watches</center></h1>
-          <br>
-          <span>22 Products</span>
-    
-          <div class="container">
-           <div class="card">
-            <img src="images/L.jpg" class="rounded" alt="">            
-            <h4><center>FORCEPRO SMARTWATCH</center></h4>
-            <center><h5><b>Rs. 14,999</b></h5></center>
-                          
-                                <span class="original-price">Rs. 29,999</span>
-                               <span class="discount-percentage"><b>50% OFF</b> </span> 
-                               <div class="rating">
-                               <center><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> (52)</center>
-                            </div>
-                            <!-- <br> -->
-                            <!-- <a href="form.html">
-                            <button class="buy-now">Buy Now</button></a> -->
-                            <div class="buy-now-container">
-                                <!-- <div class="total-price">Total: Rs. 24999.00</div> -->
-                                <a href="form.html" class="buy-now-link">
-                                    <button class="buy-now">
-                                        BUY NOW | <i class="ri-shopping-cart-line"></i>
-                                    </button>
-                                </a>
-                                <div class="delivery-info">
-                                    Delivery within 2 working days through
-                                    <img class="tcs-logo" src="images/tcs logo.png" alt="TCS Logo">
-
-                                </div>
-                                <div class="phone-number">Buy this on Phone: 0345-8259112</div>
-                            </div>
-           </div>
-
-           <div class="card">
-            <img src="images/L1.jpg"class="rounded" alt="">            
-            <h4><center>Qwxle SV-8221-M</center></h4>
-            <center><h5><b>Rs.9,999</b></h5></center>
-                          
-                                <span class="original-price">Rs.16,499</span>
-                               <span class="discount-percentage"><b>39% OFF</b> </span> 
-                              <div class="rating">
-                            <center><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> (171)</center>
-                            </div>
-                            <br>
-                            <a href="form.html">
-                              <button class="buy-now">Buy Now</button></a>
-           </div>
-
-           <div class="card">
-            <img src="images/L3.jpeg" class="rounded" alt="">            
-            <h4><center>Maverick SV-9387-M</center></h4>
-            <center><h5><b>Rs.12,899</b></h5></center>
-                        <span class="original-price">Rs.19,899</span>
-                                <span class="discount-percentage"><b>35% OFF</b> </span> 
-                                <!-- <br> -->
-                             <div class="rating">
-                             <center><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> (80)</center>
-                            </div>
-                            <br>
-                            <a href="form.html">
-                              <button class="buy-now">Buy Now</button></a>
-           </div>
-
-           <div class="card">
-            <img src="images/L4.jpg"class="rounded" alt="">            
-            <h4><center>Diesel 1.0</center></h4>
-            <center><h5><b>Rs.12,297</b></h5></center>
-                          <span class="original-price">Rs.17,999</span>
-                                 <span class="discount-percentage"><b>31% OFF</b> </span> 
-                                 <div class="rating">
-                            <center><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> (153)</center>
-                            </div>
-                            <br>
-                            <a href="form.html">
-                              <button class="buy-now">Buy Now</button></a>
-           </div>
-           <div class="card">
-            <img src="images/sports5.jpg" class="rounded"  alt="">            
-            <h4><center>Spectrum SV-9306-M</center></h4>
-            <center><h5><b>Rs. 14,189</b></h5></center>
-                        <span class="original-price">Rs.30,000</span>
-                            <span class="discount-percentage"><b>52% OFF</b> </span> 
-                              <div class="rating">
-                            <center><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> (151)</center>
-                            </div>
-                            <br>
-                            <a href="form.html">
-                              <button class="buy-now">Buy Now</button></a>
-           </div>
-           <div class="card">
-            <img src="images/sports6.jpg" class="rounded" alt="">            
-            <h4><center>NITRO SMARTWATCH</center></h4>
-            <center><h5><b>Rs.6,499</b></h5></center>
-                          
-                                <span class="original-price">Rs.8,968</span>
-                                <span class="discount-percentage"><b>27% OFF</b> </span> 
-                              <div class="rating">
-                            <center><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> (194)</center>
-                            </div>
-                            <br>
-                            <a href="form.html">
-                              <button class="buy-now">Buy Now</button></a>
-           </div>
-
-
-          </div>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="images/luxury4.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title"><center>ROLEX DAY-DATE</center></h2>
+                <center><h4 class="card_text"><b>Rs. 10,999</b></h4>
+                <span class="original-price">Rs.19,499</span>
+                <br>
+                              <span class="discount-percentage"><b>25% OFF</b> </span> </center>
+               <a href="subpages folder/ROLEX DAY-DATE EXCLUSIVE.html"> <button class="btn card_btn">Read More</button></a>
+              </div>
             </div>
-        </section>
-    </main>
-   <br><br>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="images/luxury5.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title"><center>ROLEX YACHT MASTER</center></h2>
+                <center><h4 class="card_text"><b>Rs. 9,999</b></h4>
+                <span class="original-price">Rs.7,499</span>
+                <br>
+                              <span class="discount-percentage"><b>15% OFF</b> </span> </center>
+               <a href="subpages folder/ROLEX YACHT MASTER.HTML"> <button class="btn card_btn">Read More</button></a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="images/LUX7.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title"><center>ROLEX COSMGRAPH </center></h2>
+                <center><h4 class="card_text"><b>Rs. 11,999</b></h4>
+                <span class="original-price">Rs.17,499</span>
+                <br>
+                              <span class="discount-percentage"><b>20% OFF</b> </span> </center>
+               <a href="subpages folder/ROLEX COSMGRAPH.HTML"> <button class="btn card_btn">Read More</button></a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="images/luxury2.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title"><center>ROLEX GOLD</center></h2>
+                <center><h4 class="card_text"><b>Rs. 7,990</b></h4>
+                <span class="original-price">Rs.11,499</span>
+                <br>
+                              <span class="discount-percentage"><b>15% OFF</b> </span> </center>
+               <a href="subpages folder/ROLEX SUBMARINER GOLD.HTML"><button class="btn card_btn">Read More</button></a> 
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="images/LUX6.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title"><center>ROLEX SEA-DWELLER</center></h2>
+                <center><h4 class="card_text"><b>Rs. 9,999</b></h4>
+                <span class="original-price">Rs.16,499</span>
+                <br>
+                              <span class="discount-percentage"><b>30% OFF</b> </span> </center>
+                <a href="subpages folder/ROLEX SEA-DWELLER.HTML"><button class="btn card_btn">Read More</button></a> 
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="images/luxury3.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title"><center>ROLEX  PREPETUAL</center></h2>
+                <center><h4 class="card_text"><b>Rs. 8,999</b></h4>
+                <span class="original-price">Rs.11,499</span>
+                <br>
+                              <span class="discount-percentage"><b>35% OFF</b> </span> </center>
+               <a href="subpages folder/ROLEX OYSTER PREPETUAL.HTML"> <button class="btn card_btn">Read More</button></a> 
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+   <br><br><br>
+<br><br><br>
     <section class="subscribe">
       <div class="section__container subscribe__container">
         <div>
           <h2>Subscribe Our Newsletter</h2>
-          <p>
+          <p style="color: white;">
             Be the first to know about our latest arrivals, exclusive offers,
             and insider updates by subscribing to our newsletter.
           </p>
         </div>
         <div>
-          <button class="btn">SUBSCRIBE</button>
+          <button class="btn" style="background-color: #543d37;"><a href="thankyouforsub.html" style="color: white;">SUBSCRIBE</a></button>
         </div>
       </div>
     </section>
-
-        <footer class="footer">
-          <div class="section__container footer__container">
-            <div class="footer__col">
-              <h4>Our Information</h4>
-              <ul class="footer__links">
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Condition</a></li>
-                <li><a href="#">Site Map</a></li>
-                <li><a href="#">Store House</a></li>
-              </ul>
-            </div>
-            <div class="footer__col">
-              <h4>About Us</h4>
-              <ul class="footer__links">
-                <li><a href="#">Support Center</a></li>
-                <li><a href="#">Customer Support</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Copy Right</a></li>
-                <li><a href="#">Popular Campaign</a></li>
-              </ul>
-            </div>
-            <div class="footer__col">
-              <h4>Product</h4>
-              <ul class="footer__links">
-                <li><a href="#">Sports Watches</a></li>
-                <li><a href="#">Cornographic Watches</a></li>
-                <li><a href="#">Digital Watches</a></li>
-                <li><a href="#">Mechanical Watches</a></li>
-                <li><a href="#">Accessories</a></li>
-              </ul>
-            </div>
-            <div class="footer__col">
-              <h4>Support</h4>
-              <ul class="footer__links">
-                <li><a href="#">Product Help</a></li>
-                <li><a href="#">Service & Warranty</a></li>
-                <li><a href="#">Righting Beats</a></li>
-                <li><a href="#">Authorizes Service</a></li>
-                <li><a href="#">Customer Care</a></li>
-              </ul>
-            </div>
+  <br>
+  <footer class="footer">
+    <center><h3>Follow Us</h3>
+        <div class="icon_container">
+          <div class="icon">
+              <i class="fa-brands fa-facebook" ></i>  
           </div>
-          <div class="footer__bar">
-            Copyright © 2024 Web Design Mastery. All rights reserved.
+          <div class="icon">
+              <i class="fa-brands fa-instagram" ></i>
           </div>
-        </footer>
-
-    
-</body>
-
-</html>
- 
-
+          <div class="icon">
+              <i class="fa-brands fa-twitter" ></i>
+          </div>
+          <div class="icon">
+              <i class="fa-brands fa-youtube" ></i>
+          </div>
+        </div>
+    </center>
+    <div class="footer__bar">
+      Copyright © Aura Watches Website. All rights reserved.
+    </div>
+  </footer>
+  
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+  
+  </html>
 
  

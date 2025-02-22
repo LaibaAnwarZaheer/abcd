@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            padding-left: 50px;
+            padding-top: 20px;
+        }
+
+        .contact-container {
+            background-color: #b78b5e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            color: rgb(250, 244, 244);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: rgb(250, 248, 248);
+
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #543d37;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #543d37;
+        }
+
+        iframe {
+            padding-top: 1px;
+            padding-right: 100px;
+            height: 490px;
+            /* width: 800px; */
+        }
+
+        .navbar .nav-links {
+            margin-top: -1px;
+        }
+
+        /* .btn{
+              background-color: #543d37;
+              box-shadow: 2px 2px 7px #543d37;
+                color: white;
+                width: 100%;
+       } */
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo" style="margin-top:-3px;">
+            <a href="navbar.html"><img src="images/logo-white.png" alt=""></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="navbar.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Categories <i class="ri-arrow-down-s-line"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Sport Watches.html">Sport Watches</a></li>
+                    <li><a href="smart-watches.html">Smart Watches</a></li>
+                    <li><a href="luxury watches.html">Luxury Watches</a></li>
+                    <li><a href="couplewatches.html">Couple Watches</a></li>
+                </ul>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="support.html">Support</a></li>
+
+        </ul>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-container">
+                    <h2>
+                        <center>Contact Us</center>
+                    </h2>
+                    <form action="./thankyou.html" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <input type="submit" name="submit" value="Submit" style="background-color: #543d37;
+                         border: 1px solid #543d37;color: white; 
+                         box-shadow:2px 2px 7px #543d37;">
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.158334380264!2d67.09270071059703!3d24.926675477793776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338caa5ac57cb%3A0x2c4b1fc512ab6bb!2sAptech%20Gulshan-e-Iqbal!5e0!3m2!1sen!2s!4v1740218093791!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22861.
+                    298160353243!2d67.0845213125172!3d24.932315119597423!2m3!1f0!2f0!
+                    3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1739777718289!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <section class="subscribe">
+        <div class="section__container subscribe__container">
+            <div>
+                <h2>Subscribe Our Newsletter</h2>
+                <p>
+                    Be the first to know about our latest arrivals, exclusive offers,
+                    and insider updates by subscribing to our newsletter.
+                </p>
+            </div>
+            <div>
+                <a href="thankyouforsub.html"> <button class="btn" style="color:white; ">SUBSCRIBE</button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <center>
+            <h3>Follow Us</h3>
+            <div class="icon_container">
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </center>
+        <div class="footer__bar">
+            Copyright © Aura Watches Website. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            fetch('submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('responseMessage').textContent = 'Message sent successfully!';
+                })
+                .catch(error => {
+                    document.getElementById('responseMessage').textContent = 'Failed to send message.';
+                });
+        });
+    </script>
+</body>
+
+</html>

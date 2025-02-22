@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Specifications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #b78b5e;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            /* color: #333; */
+        }
+        .image {
+            flex: 1 1 40%;
+            padding: 20px;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+
+        }
+        .specifications {
+            flex: 1 1 50%;
+            padding: 20px;
+        }
+        .specifications h2 {
+            font-size: 2em;
+            /* color: #666; */
+            margin: 10px 0;
+        }
+        .specifications ul {
+            list-style: none;
+            padding: 0;
+        }
+        .specifications ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .specifications ul li:last-child {
+            border-bottom: none;
+        }
+        .specifications ul li span {
+            font-weight: bold;
+            /* color: #333; */
+        }
+        
+.buy-now {
+  background: linear-gradient(to bottom, #f0c808, #e38f00); 
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-decoration: none;
+}
+
+.buy-now i { 
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.buy-now:hover {
+  transform: translateY(-2px); 
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+.buy-now:active {
+  transform: translateY(0); 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+.logo{
+  margin-bottom: 2px;
+}
+.navbar .nav-links{
+   margin-bottom:-9px; 
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../navbar.html"><img src="../images/logo-white.png" alt=""></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../navbar.html">Home</a></li>
+        <li class="dropdown">
+                <a href="#">Categories <i class="ri-arrow-down-s-line"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../Sport Watches.html ">Sport Watches</a></li>
+                    <li><a href="../smart-watches.html">Smart Watches</a></li>
+                    <li><a href="../luxury watches.html">Luxury Watches</a></li>
+                    <li><a href="../couplewatches.html">Couple Watches</a></li>
+                </ul>
+              </li>
+      
+            <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../support.html">Support</a></li>
+
+            <!-- <li><a href="#Support">Support</a></li> -->
+    
+        </ul>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Qwxle SV-8221-M</h1>
+        </div>
+        <div class="image">
+            <img src="../images/sports2.jpg" alt="Sample Image">
+        </div>
+        <div class="specifications">
+            <!-- <h2>Zoddok (Leather Belt)</h2> -->
+            <ul>
+                <li><span>Movement:</span>  Fully automatic/ Self winding Movement </li>
+                <li><span>Glass:</span> Sapphire Crystal Scratch proof glass</li>
+                <li><span>Size:</span> Dial 44mm </li>
+                <li><span>Weight:</span> 145 gms</li>
+                <li><span>Warranty:</span> 6 months</li>
+            </ul>
+            <a href="../puchase.html" class="buy-now-link">
+                <button class="buy-now">
+                    BUY NOW | <i class="ri-shopping-cart-line"></i>
+                </button>
+            </a> 
+        </div>
+        <!-- <a href="form.html" class="buy-now-link">
+            <button class="buy-now">
+                BUY NOW | <i class="ri-shopping-cart-line"></i>
+            </button>
+        </a> -->
+    </div>
+    <br><br><br>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <div>
+          <h2>Subscribe Our Newsletter</h2>
+          <p>
+            Be the first to know about our latest arrivals, exclusive offers,
+            and insider updates by subscribing to our newsletter.
+          </p>
+        </div>
+        <div>
+            <a href="../thankyouforsub.html"> <button class="btn">SUBSCRIBE</button></a>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="footer">
+        <center><h3>Follow Us</h3>
+            <div class="icon_container">
+              <div class="icon">
+                  <i class="fa-brands fa-facebook" ></i>  
+              </div>
+              <div class="icon">
+                  <i class="fa-brands fa-instagram" ></i>
+              </div>
+              <div class="icon">
+                  <i class="fa-brands fa-twitter" ></i>
+              </div>
+              <div class="icon">
+                  <i class="fa-brands fa-youtube" ></i>
+              </div>
+            </div>
+        </center>
+        <div class="footer__bar">
+          Copyright © Aura Watches Website. All rights reserved.
+        </div>
+      </footer>
+  
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+                            
+</body>
+</html>

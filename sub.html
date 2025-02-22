@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+         /* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(to right, #004d4d, #00b3b3, #4b0082); */
+    background-color: #543d37;
+
+}
+
+.container {
+    background-color: #b78b5e;
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-weight: 600;
+    color: #f5efef;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #f3eeee;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(8, 7, 7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    border: 1px solid #555c5c;
+    box-shadow: 0px 0px 10px rgba(84, 95, 95, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    /* background: linear-gradient(to right, #00b3b3, #4b0082); */
+    background-color: #543d37;
+
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    /* background: linear-gradient(to right, #008080, #5a0094); */
+    background-color: rgb(104, 88, 88);
+
+    transform: scale(1.05);
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    /* background: linear-gradient(to right, #00b3b3, #4b0082); */
+    background-color: rgb(104, 88, 88);
+
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    /* background: linear-gradient(to right, #008080, #5a0094); */
+    background-color: rgb(104, 88, 88);
+
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🎉 Thank You for Subscribing! 🎉</h2>
+        <p>You're now part of our awesome community. Stay tuned for updates! 🚀</p>
+        <a href="navbar.html" class="back-button">Go Back</a>
+    </div>
+<script>
+      document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+
+    if (validateEmail(email)) {
+        // Redirect to thank you page
+        window.location.href = "thank-you.html";
+    } else {
+        alert("⚠️ Please enter a valid email address.");
+    }
+});
+
+function validateEmail(email) {
+    let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+</script>
+</body>
+</html>

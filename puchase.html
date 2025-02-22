@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; 
+        text-align: center; 
+        background-color: #543d37;
+         padding: 100px;
+
+    }
+        .container { 
+            background-color: #b78b5e;
+        padding: 20px;
+         color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        display: inline-block; margin-top: 50px; 
+    }
+        button { 
+            background-color: #543d37;
+           color: white; 
+       border: none; 
+       padding: 10px 20px;
+        font-size: 16px; 
+        cursor: pointer;
+         border-radius: 5px; 
+        }
+        button:hover {
+            background-color: #543d37;
+     }
+        input {
+         width: 80%;
+         padding: 10px;
+         margin: 10px 0; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+    }
+        .hidden {
+         display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="purchasePage">
+        <h1>Purchase Your Favorite Watch</h1>
+        <form onsubmit="showConfirmationPage(event)">
+            <input type="text" placeholder="Enter your name" required><br>
+            <input type="email" placeholder="Enter your email" required><br>
+            <button type="submit">Purchase Now</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="confirmationPage">
+        <img src="images/check-removebg-preview.png" height="150px" alt="">
+        <h1>Thank You for Purchasing!</h1>
+        <p>We will proceed with your order soon.</p>
+        <a href="navbar.html">
+            <button>Return to Home</button>
+        </a>
+    </div>
+
+    <script>
+        function showConfirmationPage(event) {
+            event.preventDefault();
+            document.getElementById('purchasePage').classList.add('hidden');
+            document.getElementById('confirmationPage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
